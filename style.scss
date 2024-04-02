@@ -140,31 +140,31 @@
         }
 
         &_date {
-
-            @include lw_icon('/img/date.svg');
+ 
+            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/date.svg');
 
         }
 
         &_time {
 
-            @include lw_icon('/img/time.svg');
+            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/time.svg');
 
         }
 
         &_location {
 
-            @include lw_icon('/img/location.svg');
+            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/location.svg');
 
         }
 
         &_ticket {
 
-            @include lw_icon('/img/ticket.svg');
+            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/ticket.svg');
 
         }
 
         &_cost {
-            @include lw_icon('/img/cost.svg');
+            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/cost.svg');
         }
 
     }
