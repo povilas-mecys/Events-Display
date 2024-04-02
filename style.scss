@@ -1,185 +1,186 @@
- 
+ .lw {
+     display: flex;
+     flex-direction: column;
+     margin: auto;
 
-.lw {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+     &_events {
+         display: grid;
+         grid-template-rows: 1fr;
+         grid-template-columns: repeat(1, 1fr);
+         padding: 40px 40px 80px 40px;
 
-    &_events {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(1, 1fr);
-        padding: 40px 40px 80px 40px;
+         border-radius: 2px;
+         border: 1px solid var(--color-xlbeige);
+         background: lighten(#f8f7f5, 2%);
 
-        border-radius: 2px;
-        border: 1px solid var(--color-xlbeige);
-        background: lighten(#f8f7f5, 2%);
+         @media screen and (min-width: 780px) {
+             grid-template-columns: repeat(2, 1fr);
+         }
 
-        @media screen and (min-width: 780px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
+         @media screen and (min-width: 980px) {
+             grid-template-columns: repeat(4, 1fr);
+         }
 
-        @media screen and (min-width: 980px) {
-            grid-template-columns: repeat(4, 1fr);
-        }
+     }
 
-    }
+     &_header {
 
-    &_header {
- 
-        @media screen and (min-width: 780px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-bottom: 8%;;
-        }
-        @media screen and (min-width: 980px) {
-            display: block; 
-        }
-        &_title {
-            color: var(--color-red);
-            font-size: 40px;
-            margin: 4% 0;
-            padding-right: 40px;
+         @media screen and (min-width: 780px) {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             padding-bottom: 8%;
+             ;
+         }
 
-        }
-    }
+         @media screen and (min-width: 980px) {
+             display: block;
+         }
 
-    &_event {
+         &_title {
+             color: var(--color-red);
+             font-size: 40px;
+             margin: 4% 0;
+             padding-right: 40px;
 
-        border-bottom: 1px solid var(--color-xlbeige);
-        padding: 4% 0;
+         }
+     }
 
-        @media screen and (min-width: 780px) {
-            border: 0;
+     &_event {
 
-            &:nth-child(1) {
-                padding: 4%;
-            }
+         border-bottom: 1px solid var(--color-xlbeige);
+         padding: 4% 0;
 
-            &:nth-child(2) {
-                padding: 4%;
-                border-left: 1px solid var(--color-xlbeige);
-            }
+         @media screen and (min-width: 780px) {
+             border: 0;
 
-            &:nth-child(3) {
-                padding: 4%;
-                border-top: 1px solid var(--color-xlbeige);
-            }
+             &:nth-child(1) {
+                 padding: 4%;
+             }
 
-            &:nth-child(4) {
-                padding: 4%;
-                border-left: 1px solid var(--color-xlbeige);
-                border-top: 1px solid var(--color-xlbeige);
-            }
-        }
+             &:nth-child(2) {
+                 padding: 4%;
+                 border-left: 1px solid var(--color-xlbeige);
+             }
 
-        @media screen and (min-width: 980px) {
+             &:nth-child(3) {
+                 padding: 4%;
+                 border-top: 1px solid var(--color-xlbeige);
+             }
 
-            &:nth-child(1),
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4) {
+             &:nth-child(4) {
+                 padding: 4%;
+                 border-left: 1px solid var(--color-xlbeige);
+                 border-top: 1px solid var(--color-xlbeige);
+             }
+         }
 
-                border-top: 0;
-            }
+         @media screen and (min-width: 980px) {
 
-            border-left: 1px solid var(--color-xlbeige);
-            padding: 4% 8%;
-        }
+             &:nth-child(1),
+             &:nth-child(2),
+             &:nth-child(3),
+             &:nth-child(4) {
 
-        section {
-            font-size: 14px;
-            color: var(--color-tgray);
-        }
+                 border-top: 0;
+             }
 
-        &_title {
-            margin: 0;
-            font-family: var(--font-circular);
+             border-left: 1px solid var(--color-xlbeige);
+             padding: 4% 8%;
+         }
 
-            font-size: 18px;
-            line-height: 1.25;
+         section {
+             font-size: 14px;
+             color: var(--color-tgray);
+         }
 
-            a {
-                color: var(--color-brown);
+         &_title {
+             margin: 0;
+             font-family: var(--font-circular);
 
-                &:hover {
-                    color: var(--color-red);
-                }
+             font-size: 18px;
+             line-height: 1.25;
 
-                &:active {
-                    color: var(--color-black);
-                }
+             a {
+                 color: var(--color-brown);
 
-            }
-        }
+                 &:hover {
+                     color: var(--color-red);
+                 }
 
-        &_modality {
-            font-family: var(--font-circular);
-            border-radius: 4px;
-            background: var(--color-xlbeige);
-            font-size: 10px;
-            padding: 6px 16px;
-            display: inline-block;
-            text-transform: uppercase;
+                 &:active {
+                     color: var(--color-black);
+                 }
 
-        }
+             }
+         }
 
-        @mixin lw_icon($url) {
-            font-family: var(--font-circular);
-            position: relative;
-            font-style: normal;
-            padding-left: 24px;
+         &_modality {
+             font-family: var(--font-circular);
+             border-radius: 4px;
+             background: var(--color-xlbeige);
+             font-size: 10px;
+             padding: 6px 16px;
+             display: inline-block;
+             text-transform: uppercase;
 
-            &:before {
-                content: url(#{$url});
-                position: absolute;
-                left: 0px;
+         }
 
-            }
-        }
+         @mixin lw_icon($url) {
+             font-family: var(--font-circular);
+             position: relative;
+             font-style: normal;
+             padding-left: 24px;
 
-        &_date {
- 
-            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/date.svg');
+             &:before {
+                 content: url(#{$url});
+                 position: absolute;
+                 left: 0px;
 
-        }
+             }
+         }
 
-        &_time {
+         &_date {
 
-            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/time.svg');
+             @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/date.svg');
 
-        }
+         }
 
-        &_location {
+         &_time {
 
-            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/location.svg');
+             @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/time.svg');
 
-        }
+         }
 
-        &_ticket {
+         &_location {
 
-            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/ticket.svg');
+             @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/location.svg');
 
-        }
+         }
 
-        &_cost {
-            @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/cost.svg');
-        }
+         &_ticket {
 
-    }
+             @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/ticket.svg');
 
-    .btn-single {
-        margin: -30px auto auto auto;
-        border-radius: 2px;
+         }
 
-        &:hover {
-            background: var(--color-brown);
-        }
+         &_cost {
+             @include lw_icon('https://raw.githubusercontent.com/povilas-mecys/Events-Display/2d638258a8c605d56ea524c81b9287212e2fe332/img/cost.svg');
+         }
 
-        &:active {
-            background: var(--color-black);
-        }
-    }
+     }
 
-}
+     .btn-single {
+         margin: -30px auto auto auto;
+         border-radius: 2px;
+
+         &:hover {
+             background: var(--color-brown);
+         }
+
+         &:active {
+             background: var(--color-black);
+         }
+     }
+
+ }
